@@ -1,0 +1,53 @@
+.u-visuallyHidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px); }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #484848; }
+
+* {
+  box-sizing: border-box; }
+
+body, input, button, textarea {
+  font-size: 1.8rem;
+  font-family: 'Catamaran', Helvetica, Arial, sans-serif; }
+
+#app {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center; }
+
+.App {
+  display: flex;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 4rem 0;
+  background: #f7f7f7; }
+
+.App-main {
+  width: 100%;
+  max-width: 64rem;
+  padding: 2rem;
+  margin: auto;
+  background: #ffffff; }
+
+.App {
+  text-align: center; }
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px; }
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
