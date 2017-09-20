@@ -46,8 +46,8 @@ class Post extends Component {
   }
 
   remove = () => {
-    if (this.props.onRemove) {
-      this.props.onRemove(this.props.post);
+    if (this.props.onDelete) {
+      this.props.onDelete(this.props.post);
     }
   }
 

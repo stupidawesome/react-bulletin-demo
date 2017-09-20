@@ -112,3 +112,5 @@
     margin-top: 0; }
   .Post-action:last-child {
     margin-bottom: 0; }
+  .Post-action i {
+    margin-right: 0.5em; }

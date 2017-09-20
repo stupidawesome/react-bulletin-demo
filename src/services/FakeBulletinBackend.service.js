@@ -1,5 +1,7 @@
 import * as bulletin from '../mocks/bulletin.json'
 
+let id = bulletin.posts.length + 1
+
 class HttpResponse {
   constructor (res) {
     this.status = res.status
@@ -30,19 +32,19 @@ export default class FakeBulletinBackend {
   static addPost (post) {
     bulletin.posts = bulletin.posts.slice()
     bulletin.posts.push(Object.assign({}, post, {
-      id: bulletin.posts.length + 1,
+      id: id++,
       created: Date.now()
     }))
     return this.respond(JSON.stringify(bulletin))
   }
 
   static editPost (post) {
-    bulletin.posts = bulletin.posts.filter(bulletinPost => {
-      return post.id !== bulletinPost.id
+    const index = bulletin.posts.findIndex(bulletinPost => {
+      return post.id === bulletinPost.id
     })
-    bulletin.posts.push(Object.assign({}, post, {
+    bulletin.posts[index] = Object.assign({}, post, {
       modified: Date.now()
-    }))
+    })
 
     return this.respond(JSON.stringify(bulletin))
   }

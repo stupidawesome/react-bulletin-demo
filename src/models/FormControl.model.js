@@ -29,6 +29,14 @@ export default class FormControlModel {
   }
 
   setValue (value) {
+    this.formGroups.forEach((formGroup) => {
+      if (formGroup) {
+        formGroup.setViewValue(value[formGroup.name] === undefined ? '' : value[formGroup.name])
+      }
+    })
+  }
+
+  patchValue (value) {
     Object.keys(value).forEach((key) => {
       const formGroup = this[key]
       if (formGroup) {

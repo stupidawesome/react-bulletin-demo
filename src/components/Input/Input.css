@@ -1,0 +1,53 @@
+.u-visuallyHidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px); }
+
+.Input {
+  position: relative;
+  background: #d1d1d1;
+  z-index: 0; }
+  .Input:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -0.3rem;
+    left: -0.3rem;
+    z-index: -1;
+    background: #f7f7f7; }
+  .Input input, .Input textarea, .Input select {
+    width: 100%;
+    border: none;
+    background: transparent;
+    box-shadow: none;
+    border-radius: 0;
+    font-size: 1.6rem;
+    padding: 1rem; }
+    .Input input + .Input-focus, .Input textarea + .Input-focus, .Input select + .Input-focus {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0.4rem;
+      right: 0.4rem;
+      z-index: -1;
+      outline: 2px solid #268bd2;
+      opacity: 0;
+      transition: opacity 0.2s; }
+    .Input input:focus, .Input textarea:focus, .Input select:focus {
+      outline: none; }
+      .Input input:focus + .Input-focus, .Input textarea:focus + .Input-focus, .Input select:focus + .Input-focus {
+        opacity: 1; }
+  .Input input {
+    height: 5rem; }
+  .Input textarea {
+    display: block;
+    max-width: 100%;
+    min-height: 10em; }
+  .Input.invalid.dirty {
+    background: #ee9e9c; }
+    .Input.invalid.dirty input + .Input-focus, .Input.invalid.dirty textarea + .Input-focus, .Input.invalid.dirty select + .Input-focus {
+      outline: 2px solid #dc322f; }

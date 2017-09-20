@@ -1,0 +1,77 @@
+.u-visuallyHidden, .PostBuilder-formGroup > label {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px); }
+
+.PostBuilder-submit {
+  position: relative;
+  border: none;
+  box-shadow: none;
+  background: #a31e1b;
+  color: #ffffff;
+  padding: 1rem 3rem;
+  z-index: 0;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-shadow: 1px 1px 0 #b9221f; }
+  .PostBuilder-submit:after, .PostBuilder-submit:before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 100%;
+    left: -0.3rem;
+    top: -0.3rem;
+    right: -0.3rem;
+    background: #dc322f;
+    z-index: -1;
+    opacity: 0.5;
+    transition: inherit; }
+  .PostBuilder-submit:after {
+    left: 0;
+    top: 0;
+    right: 0;
+    opacity: 1; }
+  .PostBuilder-submit:focus {
+    outline: none; }
+    .PostBuilder-submit:focus:after {
+      background: inherit; }
+  .PostBuilder-submit:active {
+    outline: none;
+    transform: scale(0.95); }
+
+.PostBuilder:after {
+  content: "";
+  opacity: 0;
+  transition: opacity 0.4s;
+  position: absolute;
+  top: -1rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  pointer-events: none;
+  background: #ffffff; }
+
+.isLoading.PostBuilder:after {
+  opacity: 0.8; }
+
+.PostBuilder {
+  position: relative; }
+
+.PostBuilder-formGroup {
+  width: 100%;
+  position: relative;
+  max-width: 48rem;
+  margin: 1rem auto;
+  text-align: left; }
+
+.PostBuilder-submit {
+  margin: 2rem; }
+
+.PostBuilder-status {
+  width: 100%;
+  color: #dc322f;
+  font-size: 1.4rem; }
